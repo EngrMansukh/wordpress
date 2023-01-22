@@ -1,0 +1,12 @@
+function custom_page_title( $title ) {   
+
+if ( is_page( 'my-custom-page' ) ) { 
+    return 'My custom title';     
+}     
+
+return $title; 
+
+} 
+
+
+add_filter( 'wp_title', 'custom_page_title' );
